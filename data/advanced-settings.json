@@ -1,0 +1,2655 @@
+{
+  "source": {
+    "filename": "all advanced settings.mp4",
+    "duration_seconds": 276.75,
+    "game_build_shown": "3.1-643074",
+    "rules_tab": "Standard Rules"
+  },
+  "notes": [
+    "Transcribed from the supplied video. Category and setting order follow the menu.",
+    "Descriptions preserve the displayed wording, with line breaks and capitalization normalized.",
+    "Slider ranges are the demonstrated UI endpoints, inclusive. Exact step size and internal precision are not established by the video; step is null. Decimal controls display two decimal places.",
+    "Boolean false and true correspond to OFF and ON. Enum labels retain their displayed capitalization.",
+    "Null descriptions mean no description text was displayed when the setting was inspected. Null bounds mean the video did not demonstrate those limits.",
+    "Timestamps are approximate video positions. Currently selected values are not assumed to be defaults.",
+    "The Enemy Portal Wall Spawn Sort Weight slider remains at 5.00; its allowed range is not demonstrated.",
+    "The two in-progress respawn modifier descriptions permit negative values, but both demonstrated UI slider minima are 0.00."
+  ],
+  "setting_count": 115,
+  "category_counts": {
+    "Base": 6,
+    "Mode": 28,
+    "Map": 11,
+    "Teams": 6,
+    "Players": 18,
+    "Loadouts": 1,
+    "Abilities": 16,
+    "Bots": 4,
+    "Spawning": 25
+  },
+  "type_counts": {
+    "slider": 57,
+    "boolean": 55,
+    "enum": 3
+  },
+  "settings": [
+    {
+      "category": "Base",
+      "name": "Round Length",
+      "type": "slider",
+      "description": "Number of seconds that a round should last. Set to -1 for infinite duration.",
+      "allowed_values": {
+        "min": -1,
+        "max": 999
+      },
+      "notes": null,
+      "id": "base.round_length",
+      "order": 1,
+      "description_status": "transcribed",
+      "numeric_format": "integer",
+      "display_decimal_places": 0,
+      "step": null,
+      "allowed_values_status": "observed_slider_endpoints",
+      "source_timestamps": [
+        {
+          "start_seconds": 2.0,
+          "end_seconds": 4.5
+        }
+      ]
+    },
+    {
+      "category": "Base",
+      "name": "Overtime Length",
+      "type": "slider",
+      "description": "Number of seconds that overtime should last. Set to -1 to disable overtime.",
+      "allowed_values": {
+        "min": -1,
+        "max": 999
+      },
+      "notes": null,
+      "id": "base.overtime_length",
+      "order": 2,
+      "description_status": "transcribed",
+      "numeric_format": "integer",
+      "display_decimal_places": 0,
+      "step": null,
+      "allowed_values_status": "observed_slider_endpoints",
+      "source_timestamps": [
+        {
+          "start_seconds": 5.0,
+          "end_seconds": 8.5
+        }
+      ]
+    },
+    {
+      "category": "Base",
+      "name": "Sudden Death Length",
+      "type": "slider",
+      "description": "The amount of time added to the timer for sudden death. A time of 0 or less will instantly end sudden death once no objectives are being interacted with.",
+      "allowed_values": {
+        "min": 0,
+        "max": 999
+      },
+      "notes": null,
+      "id": "base.sudden_death_length",
+      "order": 3,
+      "description_status": "transcribed",
+      "numeric_format": "integer",
+      "display_decimal_places": 0,
+      "step": null,
+      "allowed_values_status": "observed_slider_endpoints",
+      "source_timestamps": [
+        {
+          "start_seconds": 9.5,
+          "end_seconds": 13.0
+        }
+      ]
+    },
+    {
+      "category": "Base",
+      "name": "Allow Normal Sudden Death",
+      "type": "boolean",
+      "description": "If true, sudden death can be triggered when the normal timer ends before going to overtime.",
+      "allowed_values": [
+        false,
+        true
+      ],
+      "notes": null,
+      "id": "base.allow_normal_sudden_death",
+      "order": 4,
+      "description_status": "transcribed",
+      "allowed_values_status": "visible_options",
+      "source_timestamps": [
+        {
+          "start_seconds": 13.5,
+          "end_seconds": 15.0
+        }
+      ]
+    },
+    {
+      "category": "Base",
+      "name": "Allow Overtime Sudden Death",
+      "type": "boolean",
+      "description": "If true, sudden death can be triggered when the overtime timer ends.",
+      "allowed_values": [
+        false,
+        true
+      ],
+      "notes": null,
+      "id": "base.allow_overtime_sudden_death",
+      "order": 5,
+      "description_status": "transcribed",
+      "allowed_values_status": "visible_options",
+      "source_timestamps": [
+        {
+          "start_seconds": 15.5,
+          "end_seconds": 16.5
+        }
+      ]
+    },
+    {
+      "category": "Base",
+      "name": "Score Mode",
+      "type": "enum",
+      "description": null,
+      "allowed_values": [
+        "HIGHEST SCORE WINS",
+        "LOWEST SCORE WINS"
+      ],
+      "notes": null,
+      "id": "base.score_mode",
+      "order": 6,
+      "description_status": "no_description_displayed",
+      "allowed_values_status": "visible_options",
+      "source_timestamps": [
+        {
+          "start_seconds": 17.0,
+          "end_seconds": 18.0
+        }
+      ]
+    },
+    {
+      "category": "Mode",
+      "name": "Spectate Closest Player on Start Spectating",
+      "type": "boolean",
+      "description": "If we want to automatically spectate the nearest player upon starting spectating. If false we just freecam at our death's camera location.",
+      "allowed_values": [
+        false,
+        true
+      ],
+      "notes": null,
+      "id": "mode.spectate_closest_player_on_start_spectating",
+      "order": 7,
+      "description_status": "transcribed",
+      "allowed_values_status": "visible_options",
+      "source_timestamps": [
+        {
+          "start_seconds": 22.0,
+          "end_seconds": 22.5
+        }
+      ]
+    },
+    {
+      "category": "Mode",
+      "name": "Spectate Player Who Killed Us when on Start Spectating as Participant",
+      "type": "boolean",
+      "description": "If we want to try spectating the player that killed us when we start spectating. Only applies to situations that allow viewing enemies",
+      "allowed_values": [
+        false,
+        true
+      ],
+      "notes": null,
+      "id": "mode.spectate_player_who_killed_us_when_on_start_spectating_as_participant",
+      "order": 8,
+      "description_status": "transcribed",
+      "allowed_values_status": "visible_options",
+      "source_timestamps": [
+        {
+          "start_seconds": 23.0,
+          "end_seconds": 23.5
+        }
+      ]
+    },
+    {
+      "category": "Mode",
+      "name": "Can Spectate Enemies",
+      "type": "boolean",
+      "description": "If spectators can ALWAYS spectate enemies, injunction or not.",
+      "allowed_values": [
+        false,
+        true
+      ],
+      "notes": null,
+      "id": "mode.can_spectate_enemies",
+      "order": 9,
+      "description_status": "transcribed",
+      "allowed_values_status": "visible_options",
+      "source_timestamps": [
+        {
+          "start_seconds": 24.5,
+          "end_seconds": 25.0
+        }
+      ]
+    },
+    {
+      "category": "Mode",
+      "name": "Can Spectate Enemies with Injunction Active",
+      "type": "boolean",
+      "description": "Allows spectating enemies if you have injunctions blocking your respawn, even if bCanSpectateEnemies is false.",
+      "allowed_values": [
+        false,
+        true
+      ],
+      "notes": null,
+      "id": "mode.can_spectate_enemies_with_injunction_active",
+      "order": 10,
+      "description_status": "transcribed",
+      "allowed_values_status": "visible_options",
+      "source_timestamps": [
+        {
+          "start_seconds": 25.5,
+          "end_seconds": 27.0
+        }
+      ]
+    },
+    {
+      "category": "Mode",
+      "name": "Free Cam Enabled",
+      "type": "boolean",
+      "description": "If true, spectators can control a \"Free Cam\" floating spectator pawn to observe the game",
+      "allowed_values": [
+        false,
+        true
+      ],
+      "notes": null,
+      "id": "mode.free_cam_enabled",
+      "order": 11,
+      "description_status": "transcribed",
+      "allowed_values_status": "visible_options",
+      "source_timestamps": [
+        {
+          "start_seconds": 27.5,
+          "end_seconds": 28.0
+        }
+      ]
+    },
+    {
+      "category": "Mode",
+      "name": "Free Cam Enabled with Injunction Active",
+      "type": "boolean",
+      "description": "If true, spectators can Free Cam even with injunctions blocking their respawn.",
+      "allowed_values": [
+        false,
+        true
+      ],
+      "notes": null,
+      "id": "mode.free_cam_enabled_with_injunction_active",
+      "order": 12,
+      "description_status": "transcribed",
+      "allowed_values_status": "visible_options",
+      "source_timestamps": [
+        {
+          "start_seconds": 28.5,
+          "end_seconds": 29.0
+        }
+      ]
+    },
+    {
+      "category": "Mode",
+      "name": "One Shot One Kill",
+      "type": "boolean",
+      "description": "If enabled, all weapons kill instantly",
+      "allowed_values": [
+        false,
+        true
+      ],
+      "notes": null,
+      "id": "mode.one_shot_one_kill",
+      "order": 13,
+      "description_status": "transcribed",
+      "allowed_values_status": "visible_options",
+      "source_timestamps": [
+        {
+          "start_seconds": 29.5,
+          "end_seconds": 29.5
+        }
+      ]
+    },
+    {
+      "category": "Mode",
+      "name": "Kill Score",
+      "type": "slider",
+      "description": "Applied when a player scores a kill",
+      "allowed_values": {
+        "min": -10,
+        "max": 10
+      },
+      "notes": null,
+      "id": "mode.kill_score",
+      "order": 14,
+      "description_status": "transcribed",
+      "numeric_format": "integer",
+      "display_decimal_places": 0,
+      "step": null,
+      "allowed_values_status": "observed_slider_endpoints",
+      "source_timestamps": [
+        {
+          "start_seconds": 30.5,
+          "end_seconds": 33.0
+        }
+      ]
+    },
+    {
+      "category": "Mode",
+      "name": "Death Score",
+      "type": "slider",
+      "description": "Applied when a player dies (but not when they commit suicide)",
+      "allowed_values": {
+        "min": -10,
+        "max": 10
+      },
+      "notes": null,
+      "id": "mode.death_score",
+      "order": 15,
+      "description_status": "transcribed",
+      "numeric_format": "integer",
+      "display_decimal_places": 0,
+      "step": null,
+      "allowed_values_status": "observed_slider_endpoints",
+      "source_timestamps": [
+        {
+          "start_seconds": 33.5,
+          "end_seconds": 36.5
+        }
+      ]
+    },
+    {
+      "category": "Mode",
+      "name": "Assist Score",
+      "type": "slider",
+      "description": "Applied when a player scores an assist. Only applied to personal score, never to team score.",
+      "allowed_values": {
+        "min": -10,
+        "max": 10
+      },
+      "notes": null,
+      "id": "mode.assist_score",
+      "order": 16,
+      "description_status": "transcribed",
+      "numeric_format": "integer",
+      "display_decimal_places": 0,
+      "step": null,
+      "allowed_values_status": "observed_slider_endpoints",
+      "source_timestamps": [
+        {
+          "start_seconds": 37.5,
+          "end_seconds": 40.5
+        }
+      ]
+    },
+    {
+      "category": "Mode",
+      "name": "Suicide Score",
+      "type": "slider",
+      "description": "Applied when a player kills themselves",
+      "allowed_values": {
+        "min": -10,
+        "max": 10
+      },
+      "notes": null,
+      "id": "mode.suicide_score",
+      "order": 17,
+      "description_status": "transcribed",
+      "numeric_format": "integer",
+      "display_decimal_places": 0,
+      "step": null,
+      "allowed_values_status": "observed_slider_endpoints",
+      "source_timestamps": [
+        {
+          "start_seconds": 41.0,
+          "end_seconds": 43.5
+        }
+      ]
+    },
+    {
+      "category": "Mode",
+      "name": "Friendly Fire Score",
+      "type": "slider",
+      "description": "Applied when a player kills a teammate",
+      "allowed_values": {
+        "min": -10,
+        "max": 10
+      },
+      "notes": null,
+      "id": "mode.friendly_fire_score",
+      "order": 18,
+      "description_status": "transcribed",
+      "numeric_format": "integer",
+      "display_decimal_places": 0,
+      "step": null,
+      "allowed_values_status": "observed_slider_endpoints",
+      "source_timestamps": [
+        {
+          "start_seconds": 44.5,
+          "end_seconds": 48.0
+        }
+      ]
+    },
+    {
+      "category": "Mode",
+      "name": "Airdrops Enabled",
+      "type": "boolean",
+      "description": "Whether airdrops are enabled",
+      "allowed_values": [
+        false,
+        true
+      ],
+      "notes": null,
+      "id": "mode.airdrops_enabled",
+      "order": 19,
+      "description_status": "transcribed",
+      "allowed_values_status": "visible_options",
+      "source_timestamps": [
+        {
+          "start_seconds": 48.5,
+          "end_seconds": 49.5
+        }
+      ]
+    },
+    {
+      "category": "Mode",
+      "name": "Min Time Between Spawns",
+      "type": "slider",
+      "description": "The minimum time between triggering airdrop spawns.",
+      "allowed_values": {
+        "min": 10.0,
+        "max": 999.0
+      },
+      "notes": null,
+      "id": "mode.min_time_between_spawns",
+      "order": 20,
+      "description_status": "transcribed",
+      "numeric_format": "decimal",
+      "display_decimal_places": 2,
+      "step": null,
+      "allowed_values_status": "observed_slider_endpoints",
+      "source_timestamps": [
+        {
+          "start_seconds": 50.0,
+          "end_seconds": 52.5
+        }
+      ]
+    },
+    {
+      "category": "Mode",
+      "name": "Max Time Between Spawns",
+      "type": "slider",
+      "description": "The maximum time between triggering airdrop spawns.",
+      "allowed_values": {
+        "min": 10.0,
+        "max": 999.0
+      },
+      "notes": null,
+      "id": "mode.max_time_between_spawns",
+      "order": 21,
+      "description_status": "transcribed",
+      "numeric_format": "decimal",
+      "display_decimal_places": 2,
+      "step": null,
+      "allowed_values_status": "observed_slider_endpoints",
+      "source_timestamps": [
+        {
+          "start_seconds": 53.5,
+          "end_seconds": 56.0
+        }
+      ]
+    },
+    {
+      "category": "Mode",
+      "name": "Min Spawn Count",
+      "type": "slider",
+      "description": "The minimum number of airdrops to spawn at a time.",
+      "allowed_values": {
+        "min": 1,
+        "max": 5
+      },
+      "notes": null,
+      "id": "mode.min_spawn_count",
+      "order": 22,
+      "description_status": "transcribed",
+      "numeric_format": "integer",
+      "display_decimal_places": 0,
+      "step": null,
+      "allowed_values_status": "observed_slider_endpoints",
+      "source_timestamps": [
+        {
+          "start_seconds": 56.5,
+          "end_seconds": 59.0
+        }
+      ]
+    },
+    {
+      "category": "Mode",
+      "name": "Max Spawn Count",
+      "type": "slider",
+      "description": "The maximum number of airdrops to spawn at a time.",
+      "allowed_values": {
+        "min": 1,
+        "max": 5
+      },
+      "notes": null,
+      "id": "mode.max_spawn_count",
+      "order": 23,
+      "description_status": "transcribed",
+      "numeric_format": "integer",
+      "display_decimal_places": 0,
+      "step": null,
+      "allowed_values_status": "observed_slider_endpoints",
+      "source_timestamps": [
+        {
+          "start_seconds": 60.0,
+          "end_seconds": 63.0
+        }
+      ]
+    },
+    {
+      "category": "Mode",
+      "name": "Time Between Airdrops",
+      "type": "slider",
+      "description": "The time between each airdrop spawning when spawning multiple at a time.",
+      "allowed_values": {
+        "min": 1.0,
+        "max": 30.0
+      },
+      "notes": null,
+      "id": "mode.time_between_airdrops",
+      "order": 24,
+      "description_status": "transcribed",
+      "numeric_format": "decimal",
+      "display_decimal_places": 2,
+      "step": null,
+      "allowed_values_status": "observed_slider_endpoints",
+      "source_timestamps": [
+        {
+          "start_seconds": 63.5,
+          "end_seconds": 67.0
+        }
+      ]
+    },
+    {
+      "category": "Mode",
+      "name": "Min Objective Range",
+      "type": "slider",
+      "description": "The minimum distance from an objective that an airdrop is allowed to spawn. This is not exact due to how airdrop volumes work, but instead uses the center of the volume's bounds to disqualify a volume for airdrop spawning.",
+      "allowed_values": {
+        "min": 0.0,
+        "max": 100000.0
+      },
+      "notes": null,
+      "id": "mode.min_objective_range",
+      "order": 25,
+      "description_status": "transcribed",
+      "numeric_format": "decimal",
+      "display_decimal_places": 2,
+      "step": null,
+      "allowed_values_status": "observed_slider_endpoints",
+      "source_timestamps": [
+        {
+          "start_seconds": 67.5,
+          "end_seconds": 70.0
+        }
+      ]
+    },
+    {
+      "category": "Mode",
+      "name": "Max Objective Range",
+      "type": "slider",
+      "description": "The maximum distance from an objective that an airdrop is allowed to spawn. This is not exact due to how airdrop volumes work, but instead uses the center of the volume's bounds to disqualify a volume for airdrop spawning.",
+      "allowed_values": {
+        "min": 0.0,
+        "max": 100000.0
+      },
+      "notes": null,
+      "id": "mode.max_objective_range",
+      "order": 26,
+      "description_status": "transcribed",
+      "numeric_format": "decimal",
+      "display_decimal_places": 2,
+      "step": null,
+      "allowed_values_status": "observed_slider_endpoints",
+      "source_timestamps": [
+        {
+          "start_seconds": 71.0,
+          "end_seconds": 73.0
+        }
+      ]
+    },
+    {
+      "category": "Mode",
+      "name": "Min Average Player Range",
+      "type": "slider",
+      "description": "The minimum distance airdrops should spawn from the average of all player positions. This is not exact due to how airdrop volumes work, but instead uses the center of the volume's bounds to disqualify a volume for airdrop spawning.",
+      "allowed_values": {
+        "min": 0.0,
+        "max": 100000.0
+      },
+      "notes": null,
+      "id": "mode.min_average_player_range",
+      "order": 27,
+      "description_status": "transcribed",
+      "numeric_format": "decimal",
+      "display_decimal_places": 2,
+      "step": null,
+      "allowed_values_status": "observed_slider_endpoints",
+      "source_timestamps": [
+        {
+          "start_seconds": 73.5,
+          "end_seconds": 76.0
+        }
+      ]
+    },
+    {
+      "category": "Mode",
+      "name": "Max Average Player Range",
+      "type": "slider",
+      "description": "The maximum distance airdrops should spawn from the average of all player positions. This is not exact due to how airdrop volumes work, but instead uses the center of the volume's bounds to disqualify a volume for airdrop spawning.",
+      "allowed_values": {
+        "min": 0.0,
+        "max": 100000.0
+      },
+      "notes": null,
+      "id": "mode.max_average_player_range",
+      "order": 28,
+      "description_status": "transcribed",
+      "numeric_format": "decimal",
+      "display_decimal_places": 2,
+      "step": null,
+      "allowed_values_status": "observed_slider_endpoints",
+      "source_timestamps": [
+        {
+          "start_seconds": 76.5,
+          "end_seconds": 78.5
+        }
+      ]
+    },
+    {
+      "category": "Mode",
+      "name": "Team Wipes Enabled",
+      "type": "boolean",
+      "description": "If true, rounds will be ended on a team wipe.",
+      "allowed_values": [
+        false,
+        true
+      ],
+      "notes": null,
+      "id": "mode.team_wipes_enabled",
+      "order": 29,
+      "description_status": "transcribed",
+      "allowed_values_status": "visible_options",
+      "source_timestamps": [
+        {
+          "start_seconds": 79.5,
+          "end_seconds": 80.0
+        }
+      ]
+    },
+    {
+      "category": "Mode",
+      "name": "Score Limit Enabled",
+      "type": "boolean",
+      "description": "Whether the score limit is enabled.",
+      "allowed_values": [
+        false,
+        true
+      ],
+      "notes": null,
+      "id": "mode.score_limit_enabled",
+      "order": 30,
+      "description_status": "transcribed",
+      "allowed_values_status": "visible_options",
+      "source_timestamps": [
+        {
+          "start_seconds": 80.5,
+          "end_seconds": 81.5
+        }
+      ]
+    },
+    {
+      "category": "Mode",
+      "name": "Score Limit",
+      "type": "slider",
+      "description": "The score at which the game will end.",
+      "allowed_values": {
+        "min": 1,
+        "max": 999
+      },
+      "notes": null,
+      "id": "mode.score_limit",
+      "order": 31,
+      "description_status": "transcribed",
+      "numeric_format": "integer",
+      "display_decimal_places": 0,
+      "step": null,
+      "allowed_values_status": "observed_slider_endpoints",
+      "source_timestamps": [
+        {
+          "start_seconds": 82.5,
+          "end_seconds": 84.5
+        }
+      ]
+    },
+    {
+      "category": "Mode",
+      "name": "Always Show Scores",
+      "type": "boolean",
+      "description": "If enabled, indicates that scores should show up even when score limits aren't enabled.",
+      "allowed_values": [
+        false,
+        true
+      ],
+      "notes": null,
+      "id": "mode.always_show_scores",
+      "order": 32,
+      "description_status": "transcribed",
+      "allowed_values_status": "visible_options",
+      "source_timestamps": [
+        {
+          "start_seconds": 85.0,
+          "end_seconds": 85.5
+        }
+      ]
+    },
+    {
+      "category": "Mode",
+      "name": "Override Score Display Type",
+      "type": "boolean",
+      "description": null,
+      "allowed_values": [
+        false,
+        true
+      ],
+      "notes": null,
+      "id": "mode.override_score_display_type",
+      "order": 33,
+      "description_status": "no_description_displayed",
+      "allowed_values_status": "visible_options",
+      "source_timestamps": [
+        {
+          "start_seconds": 87.5,
+          "end_seconds": 88.0
+        }
+      ]
+    },
+    {
+      "category": "Mode",
+      "name": "Score Display Type Override",
+      "type": "enum",
+      "description": null,
+      "allowed_values": [
+        "POINTS EARNED",
+        "FRACTION",
+        "PERCENTAGE"
+      ],
+      "notes": null,
+      "id": "mode.score_display_type_override",
+      "order": 34,
+      "description_status": "no_description_displayed",
+      "allowed_values_status": "visible_options",
+      "source_timestamps": [
+        {
+          "start_seconds": 86.5,
+          "end_seconds": 86.5
+        },
+        {
+          "start_seconds": 88.5,
+          "end_seconds": 89.0
+        }
+      ]
+    },
+    {
+      "category": "Map",
+      "name": "Weapon Pickups Enabled",
+      "type": "boolean",
+      "description": "If true, weapon pickups are enabled.",
+      "allowed_values": [
+        false,
+        true
+      ],
+      "notes": null,
+      "id": "map.weapon_pickups_enabled",
+      "order": 35,
+      "description_status": "transcribed",
+      "allowed_values_status": "visible_options",
+      "source_timestamps": [
+        {
+          "start_seconds": 93.0,
+          "end_seconds": 94.5
+        }
+      ]
+    },
+    {
+      "category": "Map",
+      "name": "Drop Only Equipped Weapon",
+      "type": "boolean",
+      "description": "Drop only the currently equipped weapon on death.",
+      "allowed_values": [
+        false,
+        true
+      ],
+      "notes": null,
+      "id": "map.drop_only_equipped_weapon",
+      "order": 36,
+      "description_status": "transcribed",
+      "allowed_values_status": "visible_options",
+      "source_timestamps": [
+        {
+          "start_seconds": 95.5,
+          "end_seconds": 97.0
+        }
+      ]
+    },
+    {
+      "category": "Map",
+      "name": "Life Span",
+      "type": "slider",
+      "description": "The amount of time before weapon pickups are destroyed (doesn't apply to pickups on item pads).",
+      "allowed_values": {
+        "min": 1.0,
+        "max": 120.0
+      },
+      "notes": null,
+      "id": "map.life_span",
+      "order": 37,
+      "description_status": "transcribed",
+      "numeric_format": "decimal",
+      "display_decimal_places": 2,
+      "step": null,
+      "allowed_values_status": "observed_slider_endpoints",
+      "source_timestamps": [
+        {
+          "start_seconds": 97.5,
+          "end_seconds": 101.5
+        }
+      ]
+    },
+    {
+      "category": "Map",
+      "name": "Power Weapon Life Span",
+      "type": "slider",
+      "description": "The amount of time before power weapon pickups are destroyed (doesn't apply to pickups on item pads).",
+      "allowed_values": {
+        "min": 1.0,
+        "max": 120.0
+      },
+      "notes": null,
+      "id": "map.power_weapon_life_span",
+      "order": 38,
+      "description_status": "transcribed",
+      "numeric_format": "decimal",
+      "display_decimal_places": 2,
+      "step": null,
+      "allowed_values_status": "observed_slider_endpoints",
+      "source_timestamps": [
+        {
+          "start_seconds": 102.0,
+          "end_seconds": 105.0
+        }
+      ]
+    },
+    {
+      "category": "Map",
+      "name": "Destroy Power Weapon Pickups Ammo Percentage",
+      "type": "slider",
+      "description": "If the power weapon pickup has less total ammo than this percentage of its magazine size, it will be destroyed.",
+      "allowed_values": {
+        "min": 0.0,
+        "max": 1.0
+      },
+      "notes": null,
+      "id": "map.destroy_power_weapon_pickups_ammo_percentage",
+      "order": 39,
+      "description_status": "transcribed",
+      "numeric_format": "decimal",
+      "display_decimal_places": 2,
+      "step": null,
+      "allowed_values_status": "observed_slider_endpoints",
+      "source_timestamps": [
+        {
+          "start_seconds": 105.5,
+          "end_seconds": 108.5
+        }
+      ]
+    },
+    {
+      "category": "Map",
+      "name": "Destroy Weapon Pickups Ammo Percentage",
+      "type": "slider",
+      "description": "If the weapon pickup has less total ammo than this percentage of its magazine size, it will be destroyed.",
+      "allowed_values": {
+        "min": 0.0,
+        "max": 1.0
+      },
+      "notes": null,
+      "id": "map.destroy_weapon_pickups_ammo_percentage",
+      "order": 40,
+      "description_status": "transcribed",
+      "numeric_format": "decimal",
+      "display_decimal_places": 2,
+      "step": null,
+      "allowed_values_status": "observed_slider_endpoints",
+      "source_timestamps": [
+        {
+          "start_seconds": 109.0,
+          "end_seconds": 112.5
+        }
+      ]
+    },
+    {
+      "category": "Map",
+      "name": "Destroy Pickups with No Ammo",
+      "type": "boolean",
+      "description": "If true, weapon pickups with no ammo will be destroyed.",
+      "allowed_values": [
+        false,
+        true
+      ],
+      "notes": null,
+      "id": "map.destroy_pickups_with_no_ammo",
+      "order": 41,
+      "description_status": "transcribed",
+      "allowed_values_status": "visible_options",
+      "source_timestamps": [
+        {
+          "start_seconds": 113.5,
+          "end_seconds": 114.0
+        }
+      ]
+    },
+    {
+      "category": "Map",
+      "name": "Enable Map Boundaries",
+      "type": "boolean",
+      "description": "Whether map boundaries are enabled.",
+      "allowed_values": [
+        false,
+        true
+      ],
+      "notes": null,
+      "id": "map.enable_map_boundaries",
+      "order": 42,
+      "description_status": "transcribed",
+      "allowed_values_status": "visible_options",
+      "source_timestamps": [
+        {
+          "start_seconds": 114.5,
+          "end_seconds": 115.0
+        }
+      ]
+    },
+    {
+      "category": "Map",
+      "name": "Item Pads Enabled",
+      "type": "boolean",
+      "description": "If true, item pads will be made available at the start of the round.",
+      "allowed_values": [
+        false,
+        true
+      ],
+      "notes": null,
+      "id": "map.item_pads_enabled",
+      "order": 43,
+      "description_status": "transcribed",
+      "allowed_values_status": "visible_options",
+      "source_timestamps": [
+        {
+          "start_seconds": 115.5,
+          "end_seconds": 116.0
+        }
+      ]
+    },
+    {
+      "category": "Map",
+      "name": "Item Respawning Enabled",
+      "type": "boolean",
+      "description": "If true, item pads will respawn items after they are picked up within a round.",
+      "allowed_values": [
+        false,
+        true
+      ],
+      "notes": null,
+      "id": "map.item_respawning_enabled",
+      "order": 44,
+      "description_status": "transcribed",
+      "allowed_values_status": "visible_options",
+      "source_timestamps": [
+        {
+          "start_seconds": 117.0,
+          "end_seconds": 118.0
+        }
+      ]
+    },
+    {
+      "category": "Map",
+      "name": "Selection Behavior",
+      "type": "enum",
+      "description": "Defines how item pads select their items.",
+      "allowed_values": [
+        "FIRST IN LIST",
+        "RANDOM PER MATCH",
+        "RANDOM PER ROUND",
+        "RANDOM PER SPAWN"
+      ],
+      "notes": null,
+      "id": "map.selection_behavior",
+      "order": 45,
+      "description_status": "transcribed",
+      "allowed_values_status": "visible_options",
+      "source_timestamps": [
+        {
+          "start_seconds": 118.5,
+          "end_seconds": 122.5
+        },
+        {
+          "start_seconds": 124.0,
+          "end_seconds": 124.0
+        }
+      ]
+    },
+    {
+      "category": "Teams",
+      "name": "Allow Friendly Fire",
+      "type": "boolean",
+      "description": "If true, players on the same team can damage each other.",
+      "allowed_values": [
+        false,
+        true
+      ],
+      "notes": null,
+      "id": "teams.allow_friendly_fire",
+      "order": 46,
+      "description_status": "transcribed",
+      "allowed_values_status": "visible_options",
+      "source_timestamps": [
+        {
+          "start_seconds": 126.5,
+          "end_seconds": 127.0
+        }
+      ]
+    },
+    {
+      "category": "Teams",
+      "name": "Allow Enemy Healing",
+      "type": "boolean",
+      "description": "If true, enemies can be healed by allied abilities.",
+      "allowed_values": [
+        false,
+        true
+      ],
+      "notes": null,
+      "id": "teams.allow_enemy_healing",
+      "order": 47,
+      "description_status": "transcribed",
+      "allowed_values_status": "visible_options",
+      "source_timestamps": [
+        {
+          "start_seconds": 127.5,
+          "end_seconds": 128.5
+        }
+      ]
+    },
+    {
+      "category": "Teams",
+      "name": "Ally Collision",
+      "type": "boolean",
+      "description": "If true, allied players can collide with each other.",
+      "allowed_values": [
+        false,
+        true
+      ],
+      "notes": null,
+      "id": "teams.ally_collision",
+      "order": 48,
+      "description_status": "transcribed",
+      "allowed_values_status": "visible_options",
+      "source_timestamps": [
+        {
+          "start_seconds": 129.0,
+          "end_seconds": 130.0
+        }
+      ]
+    },
+    {
+      "category": "Teams",
+      "name": "Enemy Collision",
+      "type": "boolean",
+      "description": "If true, enemy players can collide with each other.",
+      "allowed_values": [
+        false,
+        true
+      ],
+      "notes": null,
+      "id": "teams.enemy_collision",
+      "order": 49,
+      "description_status": "transcribed",
+      "allowed_values_status": "visible_options",
+      "source_timestamps": [
+        {
+          "start_seconds": 130.5,
+          "end_seconds": 131.0
+        }
+      ]
+    },
+    {
+      "category": "Teams",
+      "name": "Show Enemy Respawn Timers",
+      "type": "boolean",
+      "description": "If true, enemy respawn timers can/should be shown on the HUD.",
+      "allowed_values": [
+        false,
+        true
+      ],
+      "notes": null,
+      "id": "teams.show_enemy_respawn_timers",
+      "order": 50,
+      "description_status": "transcribed",
+      "allowed_values_status": "visible_options",
+      "source_timestamps": [
+        {
+          "start_seconds": 132.0,
+          "end_seconds": 132.5
+        }
+      ]
+    },
+    {
+      "category": "Teams",
+      "name": "Show Enemy Health",
+      "type": "boolean",
+      "description": "If true, enemy health can/should be shown on the HUD.",
+      "allowed_values": [
+        false,
+        true
+      ],
+      "notes": null,
+      "id": "teams.show_enemy_health",
+      "order": 51,
+      "description_status": "transcribed",
+      "allowed_values_status": "visible_options",
+      "source_timestamps": [
+        {
+          "start_seconds": 133.5,
+          "end_seconds": 134.0
+        }
+      ]
+    },
+    {
+      "category": "Players",
+      "name": "Max Health",
+      "type": "slider",
+      "description": "The Max Health the player spawns with.",
+      "allowed_values": {
+        "min": 1.0,
+        "max": 900.0
+      },
+      "notes": null,
+      "id": "players.max_health",
+      "order": 52,
+      "description_status": "transcribed",
+      "numeric_format": "decimal",
+      "display_decimal_places": 2,
+      "step": null,
+      "allowed_values_status": "observed_slider_endpoints",
+      "source_timestamps": [
+        {
+          "start_seconds": 136.5,
+          "end_seconds": 139.0
+        }
+      ]
+    },
+    {
+      "category": "Players",
+      "name": "Drop All Reserve Ammo",
+      "type": "boolean",
+      "description": "If true, all reserve ammo for a weapon will be dropped when a weapon pickup is spawned.",
+      "allowed_values": [
+        false,
+        true
+      ],
+      "notes": null,
+      "id": "players.drop_all_reserve_ammo",
+      "order": 53,
+      "description_status": "transcribed",
+      "allowed_values_status": "visible_options",
+      "source_timestamps": [
+        {
+          "start_seconds": 140.0,
+          "end_seconds": 140.0
+        }
+      ]
+    },
+    {
+      "category": "Players",
+      "name": "Infinite Magazine",
+      "type": "boolean",
+      "description": "If true, weapons have infinite magazines.",
+      "allowed_values": [
+        false,
+        true
+      ],
+      "notes": null,
+      "id": "players.infinite_magazine",
+      "order": 54,
+      "description_status": "transcribed",
+      "allowed_values_status": "visible_options",
+      "source_timestamps": [
+        {
+          "start_seconds": 141.0,
+          "end_seconds": 141.5
+        }
+      ]
+    },
+    {
+      "category": "Players",
+      "name": "Infinite Reserves",
+      "type": "boolean",
+      "description": "If true, weapons have infinite ammo reserves.",
+      "allowed_values": [
+        false,
+        true
+      ],
+      "notes": null,
+      "id": "players.infinite_reserves",
+      "order": 55,
+      "description_status": "transcribed",
+      "allowed_values_status": "visible_options",
+      "source_timestamps": [
+        {
+          "start_seconds": 142.0,
+          "end_seconds": 142.5
+        }
+      ]
+    },
+    {
+      "category": "Players",
+      "name": "Infinite Equipment",
+      "type": "boolean",
+      "description": "If true, equipment has infinite uses.",
+      "allowed_values": [
+        false,
+        true
+      ],
+      "notes": null,
+      "id": "players.infinite_equipment",
+      "order": 56,
+      "description_status": "transcribed",
+      "allowed_values_status": "visible_options",
+      "source_timestamps": [
+        {
+          "start_seconds": 143.0,
+          "end_seconds": 143.5
+        }
+      ]
+    },
+    {
+      "category": "Players",
+      "name": "Damage Multiplier",
+      "type": "slider",
+      "description": "How much to multiply player outgoing damage by.",
+      "allowed_values": {
+        "min": 0.25,
+        "max": 2.5
+      },
+      "notes": null,
+      "id": "players.damage_multiplier",
+      "order": 57,
+      "description_status": "transcribed",
+      "numeric_format": "decimal",
+      "display_decimal_places": 2,
+      "step": null,
+      "allowed_values_status": "observed_slider_endpoints",
+      "source_timestamps": [
+        {
+          "start_seconds": 144.0,
+          "end_seconds": 148.0
+        }
+      ]
+    },
+    {
+      "category": "Players",
+      "name": "Melee Damage Multiplier",
+      "type": "slider",
+      "description": "How much to multiply player melee damage by.",
+      "allowed_values": {
+        "min": 0.25,
+        "max": 2.5
+      },
+      "notes": null,
+      "id": "players.melee_damage_multiplier",
+      "order": 58,
+      "description_status": "transcribed",
+      "numeric_format": "decimal",
+      "display_decimal_places": 2,
+      "step": null,
+      "allowed_values_status": "observed_slider_endpoints",
+      "source_timestamps": [
+        {
+          "start_seconds": 148.5,
+          "end_seconds": 151.5
+        }
+      ]
+    },
+    {
+      "category": "Players",
+      "name": "Precision Damage Multiplier",
+      "type": "slider",
+      "description": "How much to multiply player precision damage by.",
+      "allowed_values": {
+        "min": 0.25,
+        "max": 2.5
+      },
+      "notes": null,
+      "id": "players.precision_damage_multiplier",
+      "order": 59,
+      "description_status": "transcribed",
+      "numeric_format": "decimal",
+      "display_decimal_places": 2,
+      "step": null,
+      "allowed_values_status": "observed_slider_endpoints",
+      "source_timestamps": [
+        {
+          "start_seconds": 152.0,
+          "end_seconds": 155.0
+        }
+      ]
+    },
+    {
+      "category": "Players",
+      "name": "Precision Damage Only",
+      "type": "boolean",
+      "description": "Whether to enable precision damage only (e.g. headshots).",
+      "allowed_values": [
+        false,
+        true
+      ],
+      "notes": null,
+      "id": "players.precision_damage_only",
+      "order": 60,
+      "description_status": "transcribed",
+      "allowed_values_status": "visible_options",
+      "source_timestamps": [
+        {
+          "start_seconds": 155.5,
+          "end_seconds": 156.0
+        }
+      ]
+    },
+    {
+      "category": "Players",
+      "name": "Enable Big Head Mode",
+      "type": "boolean",
+      "description": "Whether big head mode is enabled.",
+      "allowed_values": [
+        false,
+        true
+      ],
+      "notes": null,
+      "id": "players.enable_big_head_mode",
+      "order": 61,
+      "description_status": "transcribed",
+      "allowed_values_status": "visible_options",
+      "source_timestamps": [
+        {
+          "start_seconds": 156.5,
+          "end_seconds": 157.0
+        }
+      ]
+    },
+    {
+      "category": "Players",
+      "name": "Movement Speed Multiplier",
+      "type": "slider",
+      "description": "Multiplier for the player's movement speed (and acceleration)",
+      "allowed_values": {
+        "min": 0.25,
+        "max": 2.5
+      },
+      "notes": null,
+      "id": "players.movement_speed_multiplier",
+      "order": 62,
+      "description_status": "transcribed",
+      "numeric_format": "decimal",
+      "display_decimal_places": 2,
+      "step": null,
+      "allowed_values_status": "observed_slider_endpoints",
+      "source_timestamps": [
+        {
+          "start_seconds": 157.5,
+          "end_seconds": 161.0
+        },
+        {
+          "start_seconds": 177.0,
+          "end_seconds": 177.0
+        }
+      ]
+    },
+    {
+      "category": "Players",
+      "name": "Gravity Scale Multiplier",
+      "type": "slider",
+      "description": "Multiplier for the player's gravity scale",
+      "allowed_values": {
+        "min": 0.25,
+        "max": 2.5
+      },
+      "notes": null,
+      "id": "players.gravity_scale_multiplier",
+      "order": 63,
+      "description_status": "transcribed",
+      "numeric_format": "decimal",
+      "display_decimal_places": 2,
+      "step": null,
+      "allowed_values_status": "observed_slider_endpoints",
+      "source_timestamps": [
+        {
+          "start_seconds": 161.5,
+          "end_seconds": 164.0
+        }
+      ]
+    },
+    {
+      "category": "Players",
+      "name": "Jump Height Multiplier",
+      "type": "slider",
+      "description": "Multiplier for the player's jump velocity",
+      "allowed_values": {
+        "min": 0.25,
+        "max": 2.5
+      },
+      "notes": null,
+      "id": "players.jump_height_multiplier",
+      "order": 64,
+      "description_status": "transcribed",
+      "numeric_format": "decimal",
+      "display_decimal_places": 2,
+      "step": null,
+      "allowed_values_status": "observed_slider_endpoints",
+      "source_timestamps": [
+        {
+          "start_seconds": 164.5,
+          "end_seconds": 167.0
+        }
+      ]
+    },
+    {
+      "category": "Players",
+      "name": "Allow Beginning Recharge in Air",
+      "type": "boolean",
+      "description": "Whether the thruster can start to recharge while the player is in the air or on a non-walkable surface.",
+      "allowed_values": [
+        false,
+        true
+      ],
+      "notes": null,
+      "id": "players.allow_beginning_recharge_in_air",
+      "order": 65,
+      "description_status": "transcribed",
+      "allowed_values_status": "visible_options",
+      "source_timestamps": [
+        {
+          "start_seconds": 168.0,
+          "end_seconds": 169.0
+        }
+      ]
+    },
+    {
+      "category": "Players",
+      "name": "Allow Recharge After Teleport",
+      "type": "boolean",
+      "description": "Whether the thruster recharge can start when you go through a portal but are in mid-air, even when Allow Beginning Recharge in Air is false.",
+      "allowed_values": [
+        false,
+        true
+      ],
+      "notes": null,
+      "id": "players.allow_recharge_after_teleport",
+      "order": 66,
+      "description_status": "transcribed",
+      "allowed_values_status": "visible_options",
+      "source_timestamps": [
+        {
+          "start_seconds": 169.5,
+          "end_seconds": 170.0
+        }
+      ]
+    },
+    {
+      "category": "Players",
+      "name": "Thruster Recharge Delay",
+      "type": "slider",
+      "description": "Time we need to wait for the thruster to start recharging.",
+      "allowed_values": {
+        "min": 0.0,
+        "max": 100.0
+      },
+      "notes": null,
+      "id": "players.thruster_recharge_delay",
+      "order": 67,
+      "description_status": "transcribed",
+      "numeric_format": "decimal",
+      "display_decimal_places": 2,
+      "step": null,
+      "allowed_values_status": "observed_slider_endpoints",
+      "source_timestamps": [
+        {
+          "start_seconds": 170.5,
+          "end_seconds": 172.0
+        }
+      ]
+    },
+    {
+      "category": "Players",
+      "name": "Lives Enabled",
+      "type": "boolean",
+      "description": "If true, player respawns will be restricted based on their number of lives.",
+      "allowed_values": [
+        false,
+        true
+      ],
+      "notes": null,
+      "id": "players.lives_enabled",
+      "order": 68,
+      "description_status": "transcribed",
+      "allowed_values_status": "visible_options",
+      "source_timestamps": [
+        {
+          "start_seconds": 173.0,
+          "end_seconds": 173.0
+        }
+      ]
+    },
+    {
+      "category": "Players",
+      "name": "Number Of Lives",
+      "type": "slider",
+      "description": "The number of lives granted to players by default.",
+      "allowed_values": {
+        "min": 1,
+        "max": 100
+      },
+      "notes": null,
+      "id": "players.number_of_lives",
+      "order": 69,
+      "description_status": "transcribed",
+      "numeric_format": "integer",
+      "display_decimal_places": 0,
+      "step": null,
+      "allowed_values_status": "observed_slider_endpoints",
+      "source_timestamps": [
+        {
+          "start_seconds": 174.0,
+          "end_seconds": 176.5
+        }
+      ]
+    },
+    {
+      "category": "Loadouts",
+      "name": "Allow Loadout Changes During Gameplay",
+      "type": "boolean",
+      "description": null,
+      "allowed_values": [
+        false,
+        true
+      ],
+      "notes": null,
+      "id": "loadouts.allow_loadout_changes_during_gameplay",
+      "order": 70,
+      "description_status": "no_description_displayed",
+      "allowed_values_status": "visible_options",
+      "source_timestamps": [
+        {
+          "start_seconds": 178.0,
+          "end_seconds": 178.0
+        }
+      ]
+    },
+    {
+      "category": "Abilities",
+      "name": "Disable Radar",
+      "type": "boolean",
+      "description": "If true, the radar will be disabled on player HUDs.",
+      "allowed_values": [
+        false,
+        true
+      ],
+      "notes": null,
+      "id": "abilities.disable_radar",
+      "order": 71,
+      "description_status": "transcribed",
+      "allowed_values_status": "visible_options",
+      "source_timestamps": [
+        {
+          "start_seconds": 181.0,
+          "end_seconds": 181.0
+        }
+      ]
+    },
+    {
+      "category": "Abilities",
+      "name": "Weapon Attacks Reveal Self on Radar",
+      "type": "boolean",
+      "description": "If enabled, the player is revealed on their enemy's radar when they attack with their weapon.",
+      "allowed_values": [
+        false,
+        true
+      ],
+      "notes": null,
+      "id": "abilities.weapon_attacks_reveal_self_on_radar",
+      "order": 72,
+      "description_status": "transcribed",
+      "allowed_values_status": "visible_options",
+      "source_timestamps": [
+        {
+          "start_seconds": 182.0,
+          "end_seconds": 182.0
+        }
+      ]
+    },
+    {
+      "category": "Abilities",
+      "name": "Radar Boundary Extent",
+      "type": "slider",
+      "description": "The distance of how far the radar can see (in world units)",
+      "allowed_values": {
+        "min": -1.0,
+        "max": 20000.0
+      },
+      "notes": null,
+      "id": "abilities.radar_boundary_extent",
+      "order": 73,
+      "description_status": "transcribed",
+      "numeric_format": "decimal",
+      "display_decimal_places": 2,
+      "step": null,
+      "allowed_values_status": "observed_slider_endpoints",
+      "source_timestamps": [
+        {
+          "start_seconds": 182.5,
+          "end_seconds": 184.5
+        }
+      ]
+    },
+    {
+      "category": "Abilities",
+      "name": "Number of Portal Charges",
+      "type": "slider",
+      "description": "Number of portal uses before needing to recharge. Set to 0 for unlimited.",
+      "allowed_values": {
+        "min": 0,
+        "max": 100
+      },
+      "notes": null,
+      "id": "abilities.number_of_portal_charges",
+      "order": 74,
+      "description_status": "transcribed",
+      "numeric_format": "integer",
+      "display_decimal_places": 0,
+      "step": null,
+      "allowed_values_status": "observed_slider_endpoints",
+      "source_timestamps": [
+        {
+          "start_seconds": 185.0,
+          "end_seconds": 187.5
+        }
+      ]
+    },
+    {
+      "category": "Abilities",
+      "name": "Portal Gun Recharge Rate",
+      "type": "slider",
+      "description": "Recharge rate of our Portal Gun. Set to 0 to never recharge.",
+      "allowed_values": {
+        "min": 0.0,
+        "max": 300.0
+      },
+      "notes": null,
+      "id": "abilities.portal_gun_recharge_rate",
+      "order": 75,
+      "description_status": "transcribed",
+      "numeric_format": "decimal",
+      "display_decimal_places": 2,
+      "step": null,
+      "allowed_values_status": "observed_slider_endpoints",
+      "source_timestamps": [
+        {
+          "start_seconds": 188.0,
+          "end_seconds": 190.0
+        }
+      ]
+    },
+    {
+      "category": "Abilities",
+      "name": "Refill All Portals on Recharge",
+      "type": "boolean",
+      "description": "Whether to fill all portal charges at once on recharge or one at a time.",
+      "allowed_values": [
+        false,
+        true
+      ],
+      "notes": null,
+      "id": "abilities.refill_all_portals_on_recharge",
+      "order": 76,
+      "description_status": "transcribed",
+      "allowed_values_status": "visible_options",
+      "source_timestamps": [
+        {
+          "start_seconds": 190.5,
+          "end_seconds": 190.5
+        }
+      ]
+    },
+    {
+      "category": "Abilities",
+      "name": "Portal Wall Overloading",
+      "type": "boolean",
+      "description": "Whether or not to overload a Portal Wall when you place portals on it",
+      "allowed_values": [
+        false,
+        true
+      ],
+      "notes": null,
+      "id": "abilities.portal_wall_overloading",
+      "order": 77,
+      "description_status": "transcribed",
+      "allowed_values_status": "visible_options",
+      "source_timestamps": [
+        {
+          "start_seconds": 191.5,
+          "end_seconds": 191.5
+        }
+      ]
+    },
+    {
+      "category": "Abilities",
+      "name": "Enable Portals",
+      "type": "boolean",
+      "description": "Whether portals are enabled",
+      "allowed_values": [
+        false,
+        true
+      ],
+      "notes": null,
+      "id": "abilities.enable_portals",
+      "order": 78,
+      "description_status": "transcribed",
+      "allowed_values_status": "visible_options",
+      "source_timestamps": [
+        {
+          "start_seconds": 192.0,
+          "end_seconds": 192.5
+        }
+      ]
+    },
+    {
+      "category": "Abilities",
+      "name": "Allow Replacing Ally Portals",
+      "type": "boolean",
+      "description": null,
+      "allowed_values": [
+        false,
+        true
+      ],
+      "notes": null,
+      "id": "abilities.allow_replacing_ally_portals",
+      "order": 79,
+      "description_status": "no_description_displayed",
+      "allowed_values_status": "visible_options",
+      "source_timestamps": [
+        {
+          "start_seconds": 193.0,
+          "end_seconds": 193.5
+        }
+      ]
+    },
+    {
+      "category": "Abilities",
+      "name": "Allow Replacing Enemy Portals",
+      "type": "boolean",
+      "description": null,
+      "allowed_values": [
+        false,
+        true
+      ],
+      "notes": null,
+      "id": "abilities.allow_replacing_enemy_portals",
+      "order": 80,
+      "description_status": "no_description_displayed",
+      "allowed_values_status": "visible_options",
+      "source_timestamps": [
+        {
+          "start_seconds": 194.0,
+          "end_seconds": 194.5
+        }
+      ]
+    },
+    {
+      "category": "Abilities",
+      "name": "Block Replacement Time",
+      "type": "slider",
+      "description": "The amount of time after placement that a portal can't be replaced by other players. Set to 0 to always allow replacement.",
+      "allowed_values": {
+        "min": 0.0,
+        "max": 10.0
+      },
+      "notes": null,
+      "id": "abilities.block_replacement_time",
+      "order": 81,
+      "description_status": "transcribed",
+      "numeric_format": "decimal",
+      "display_decimal_places": 2,
+      "step": null,
+      "allowed_values_status": "observed_slider_endpoints",
+      "source_timestamps": [
+        {
+          "start_seconds": 195.0,
+          "end_seconds": 198.0
+        }
+      ]
+    },
+    {
+      "category": "Abilities",
+      "name": "Equipment Cooldown Multiplier",
+      "type": "slider",
+      "description": "Multiplier for the equipment cooldown",
+      "allowed_values": {
+        "min": 0.1,
+        "max": 10.0
+      },
+      "notes": null,
+      "id": "abilities.equipment_cooldown_multiplier",
+      "order": 82,
+      "description_status": "transcribed",
+      "numeric_format": "decimal",
+      "display_decimal_places": 2,
+      "step": null,
+      "allowed_values_status": "observed_slider_endpoints",
+      "source_timestamps": [
+        {
+          "start_seconds": 198.5,
+          "end_seconds": 200.5
+        }
+      ]
+    },
+    {
+      "category": "Abilities",
+      "name": "Thruster Usage Multiplier",
+      "type": "slider",
+      "description": "Multiplier for how long a player can use the thruster",
+      "allowed_values": {
+        "min": 0.25,
+        "max": 2.5
+      },
+      "notes": null,
+      "id": "abilities.thruster_usage_multiplier",
+      "order": 83,
+      "description_status": "transcribed",
+      "numeric_format": "decimal",
+      "display_decimal_places": 2,
+      "step": null,
+      "allowed_values_status": "observed_slider_endpoints",
+      "source_timestamps": [
+        {
+          "start_seconds": 201.0,
+          "end_seconds": 203.0
+        }
+      ]
+    },
+    {
+      "category": "Abilities",
+      "name": "Thruster Acceleration Multiplier",
+      "type": "slider",
+      "description": "Multiplier for the thruster's acceleration",
+      "allowed_values": {
+        "min": 0.25,
+        "max": 2.5
+      },
+      "notes": null,
+      "id": "abilities.thruster_acceleration_multiplier",
+      "order": 84,
+      "description_status": "transcribed",
+      "numeric_format": "decimal",
+      "display_decimal_places": 2,
+      "step": null,
+      "allowed_values_status": "observed_slider_endpoints",
+      "source_timestamps": [
+        {
+          "start_seconds": 203.5,
+          "end_seconds": 205.5
+        }
+      ]
+    },
+    {
+      "category": "Abilities",
+      "name": "Enable Sprint",
+      "type": "boolean",
+      "description": "Whether sprinting is enabled",
+      "allowed_values": [
+        false,
+        true
+      ],
+      "notes": null,
+      "id": "abilities.enable_sprint",
+      "order": 85,
+      "description_status": "transcribed",
+      "allowed_values_status": "visible_options",
+      "source_timestamps": [
+        {
+          "start_seconds": 206.0,
+          "end_seconds": 206.5
+        }
+      ]
+    },
+    {
+      "category": "Abilities",
+      "name": "Enable Thruster",
+      "type": "boolean",
+      "description": "Whether thruster is enabled",
+      "allowed_values": [
+        false,
+        true
+      ],
+      "notes": null,
+      "id": "abilities.enable_thruster",
+      "order": 86,
+      "description_status": "transcribed",
+      "allowed_values_status": "visible_options",
+      "source_timestamps": [
+        {
+          "start_seconds": 207.0,
+          "end_seconds": 207.5
+        }
+      ]
+    },
+    {
+      "category": "Bots",
+      "name": "Bots Enabled",
+      "type": "boolean",
+      "description": "If true, bots will be spawned",
+      "allowed_values": [
+        false,
+        true
+      ],
+      "notes": null,
+      "id": "bots.bots_enabled",
+      "order": 87,
+      "description_status": "transcribed",
+      "allowed_values_status": "visible_options",
+      "source_timestamps": [
+        {
+          "start_seconds": 209.0,
+          "end_seconds": 210.0
+        }
+      ]
+    },
+    {
+      "category": "Bots",
+      "name": "Auto Rebalance",
+      "type": "boolean",
+      "description": "If true, bots will automatically try to rebalance teams if players join or leave during a round.",
+      "allowed_values": [
+        false,
+        true
+      ],
+      "notes": null,
+      "id": "bots.auto_rebalance",
+      "order": 88,
+      "description_status": "transcribed",
+      "allowed_values_status": "visible_options",
+      "source_timestamps": [
+        {
+          "start_seconds": 210.5,
+          "end_seconds": 211.0
+        }
+      ]
+    },
+    {
+      "category": "Bots",
+      "name": "Spawn Custom Num Bots",
+      "type": "boolean",
+      "description": "If true, will spawn a custom number of bots. If false, will spawn bots until all player slots are filled.",
+      "allowed_values": [
+        false,
+        true
+      ],
+      "notes": null,
+      "id": "bots.spawn_custom_num_bots",
+      "order": 89,
+      "description_status": "transcribed",
+      "allowed_values_status": "visible_options",
+      "source_timestamps": [
+        {
+          "start_seconds": 211.5,
+          "end_seconds": 212.0
+        }
+      ]
+    },
+    {
+      "category": "Bots",
+      "name": "Custom Bot Num",
+      "type": "slider",
+      "description": "A custom number of bots to spawn",
+      "allowed_values": {
+        "min": 0,
+        "max": 24
+      },
+      "notes": null,
+      "id": "bots.custom_bot_num",
+      "order": 90,
+      "description_status": "transcribed",
+      "numeric_format": "integer",
+      "display_decimal_places": 0,
+      "step": null,
+      "allowed_values_status": "observed_slider_endpoints",
+      "source_timestamps": [
+        {
+          "start_seconds": 212.5,
+          "end_seconds": 215.0
+        }
+      ]
+    },
+    {
+      "category": "Spawning",
+      "name": "Respawn Time",
+      "type": "slider",
+      "description": "The amount of time after dying that the player can respawn.",
+      "allowed_values": {
+        "min": 0.0,
+        "max": 999.0
+      },
+      "notes": null,
+      "id": "spawning.respawn_time",
+      "order": 91,
+      "description_status": "transcribed",
+      "numeric_format": "decimal",
+      "display_decimal_places": 2,
+      "step": null,
+      "allowed_values_status": "observed_slider_endpoints",
+      "source_timestamps": [
+        {
+          "start_seconds": 217.0,
+          "end_seconds": 219.0
+        }
+      ]
+    },
+    {
+      "category": "Spawning",
+      "name": "Death Respawn Time Penalty",
+      "type": "slider",
+      "description": "Dead player gets this penalty applied to their respawn time (can be negative).",
+      "allowed_values": {
+        "min": -999,
+        "max": 999
+      },
+      "notes": null,
+      "id": "spawning.death_respawn_time_penalty",
+      "order": 92,
+      "description_status": "transcribed",
+      "numeric_format": "decimal",
+      "display_decimal_places": 2,
+      "step": null,
+      "allowed_values_status": "observed_slider_endpoints",
+      "source_timestamps": [
+        {
+          "start_seconds": 219.5,
+          "end_seconds": 221.5
+        }
+      ]
+    },
+    {
+      "category": "Spawning",
+      "name": "Kill Respawn Time Penalty",
+      "type": "slider",
+      "description": "Killer gets this penalty applied to their respawn time (can be negative).",
+      "allowed_values": {
+        "min": -999.0,
+        "max": 999.0
+      },
+      "notes": null,
+      "id": "spawning.kill_respawn_time_penalty",
+      "order": 93,
+      "description_status": "transcribed",
+      "numeric_format": "decimal",
+      "display_decimal_places": 2,
+      "step": null,
+      "allowed_values_status": "observed_slider_endpoints",
+      "source_timestamps": [
+        {
+          "start_seconds": 222.0,
+          "end_seconds": 224.5
+        }
+      ]
+    },
+    {
+      "category": "Spawning",
+      "name": "Periodic Penalty Time",
+      "type": "slider",
+      "description": "If > 0, this is the repeating period after which all players' respawn penalties will increase.",
+      "allowed_values": {
+        "min": 0.0,
+        "max": 999.0
+      },
+      "notes": null,
+      "id": "spawning.periodic_penalty_time",
+      "order": 94,
+      "description_status": "transcribed",
+      "numeric_format": "decimal",
+      "display_decimal_places": 2,
+      "step": null,
+      "allowed_values_status": "observed_slider_endpoints",
+      "source_timestamps": [
+        {
+          "start_seconds": 225.0,
+          "end_seconds": 227.0
+        }
+      ]
+    },
+    {
+      "category": "Spawning",
+      "name": "Periodic Penalty Amount",
+      "type": "slider",
+      "description": "If not 0, this is the amount by which all players' respawn penalties will increase after PeriodicPenaltyTime.",
+      "allowed_values": {
+        "min": -999.0,
+        "max": 999.0
+      },
+      "notes": null,
+      "id": "spawning.periodic_penalty_amount",
+      "order": 95,
+      "description_status": "transcribed",
+      "numeric_format": "decimal",
+      "display_decimal_places": 2,
+      "step": null,
+      "allowed_values_status": "observed_slider_endpoints",
+      "source_timestamps": [
+        {
+          "start_seconds": 227.5,
+          "end_seconds": 229.0
+        }
+      ]
+    },
+    {
+      "category": "Spawning",
+      "name": "Respawn Penalty Min",
+      "type": "slider",
+      "description": "Minimum value for respawn penalty.",
+      "allowed_values": {
+        "min": -999,
+        "max": 999
+      },
+      "notes": null,
+      "id": "spawning.respawn_penalty_min",
+      "order": 96,
+      "description_status": "transcribed",
+      "numeric_format": "decimal",
+      "display_decimal_places": 2,
+      "step": null,
+      "allowed_values_status": "observed_slider_endpoints",
+      "source_timestamps": [
+        {
+          "start_seconds": 229.5,
+          "end_seconds": 231.5
+        }
+      ]
+    },
+    {
+      "category": "Spawning",
+      "name": "Respawn Penalty Max",
+      "type": "slider",
+      "description": "Maximum value for respawn penalty.",
+      "allowed_values": {
+        "min": -999.0,
+        "max": 999.0
+      },
+      "notes": null,
+      "id": "spawning.respawn_penalty_max",
+      "order": 97,
+      "description_status": "transcribed",
+      "numeric_format": "decimal",
+      "display_decimal_places": 2,
+      "step": null,
+      "allowed_values_status": "observed_slider_endpoints",
+      "source_timestamps": [
+        {
+          "start_seconds": 232.0,
+          "end_seconds": 234.0
+        }
+      ]
+    },
+    {
+      "category": "Spawning",
+      "name": "Death in Progress Respawn Modifier",
+      "type": "slider",
+      "description": "Dead players (and their teammates, if team penalties are enabled) get this modifier applied to their current respawn time (can be negative).",
+      "allowed_values": {
+        "min": 0,
+        "max": 999
+      },
+      "notes": "The description says this can be negative, but the demonstrated slider minimum is 0.00.",
+      "id": "spawning.death_in_progress_respawn_modifier",
+      "order": 98,
+      "description_status": "transcribed",
+      "numeric_format": "decimal",
+      "display_decimal_places": 2,
+      "step": null,
+      "allowed_values_status": "observed_slider_endpoints",
+      "source_timestamps": [
+        {
+          "start_seconds": 234.5,
+          "end_seconds": 236.5
+        }
+      ]
+    },
+    {
+      "category": "Spawning",
+      "name": "Kill in Progress Respawn Modifier",
+      "type": "slider",
+      "description": "Killers (and their teammates, if team penalties are enabled) get this modifier applied to their current respawn time (can be negative).",
+      "allowed_values": {
+        "min": 0,
+        "max": 999
+      },
+      "notes": "The description says this can be negative, but the demonstrated slider minimum is 0.00.",
+      "id": "spawning.kill_in_progress_respawn_modifier",
+      "order": 99,
+      "description_status": "transcribed",
+      "numeric_format": "decimal",
+      "display_decimal_places": 2,
+      "step": null,
+      "allowed_values_status": "observed_slider_endpoints",
+      "source_timestamps": [
+        {
+          "start_seconds": 237.0,
+          "end_seconds": 238.5
+        }
+      ]
+    },
+    {
+      "category": "Spawning",
+      "name": "Allow Timed Respawns",
+      "type": "boolean",
+      "description": "If false, the timed respawn component will never trigger a respawn by itself.",
+      "allowed_values": [
+        false,
+        true
+      ],
+      "notes": null,
+      "id": "spawning.allow_timed_respawns",
+      "order": 100,
+      "description_status": "transcribed",
+      "allowed_values_status": "visible_options",
+      "source_timestamps": [
+        {
+          "start_seconds": 239.5,
+          "end_seconds": 240.0
+        }
+      ]
+    },
+    {
+      "category": "Spawning",
+      "name": "Team Based Respawn Penalties",
+      "type": "boolean",
+      "description": "If true, team-based games will apply kill/death respawn penalties to the entire team rather than individual players. If false, kill/death respawn penalties will only apply to instigator/target.",
+      "allowed_values": [
+        false,
+        true
+      ],
+      "notes": null,
+      "id": "spawning.team_based_respawn_penalties",
+      "order": 101,
+      "description_status": "transcribed",
+      "allowed_values_status": "visible_options",
+      "source_timestamps": [
+        {
+          "start_seconds": 240.5,
+          "end_seconds": 241.5
+        },
+        {
+          "start_seconds": 275.0,
+          "end_seconds": 275.0
+        }
+      ]
+    },
+    {
+      "category": "Spawning",
+      "name": "Always Use Team Spawns",
+      "type": "boolean",
+      "description": "If true *and* in a team game, requires the use of team-specific spawns. This enables \"CTF-style\" spawning, where teams only ever spawn in their own bases.",
+      "allowed_values": [
+        false,
+        true
+      ],
+      "notes": null,
+      "id": "spawning.always_use_team_spawns",
+      "order": 102,
+      "description_status": "transcribed",
+      "allowed_values_status": "visible_options",
+      "source_timestamps": [
+        {
+          "start_seconds": 242.5,
+          "end_seconds": 243.0
+        }
+      ]
+    },
+    {
+      "category": "Spawning",
+      "name": "Require Nearby Allies",
+      "type": "boolean",
+      "description": "If true, only spawns with allies nearby will be considered. This is a simple \"is an ally nearby\" check, it is not weighted like enemies are. If there are no allies found then this option is ignored. This option isn't super useful for normal arena maps.",
+      "allowed_values": [
+        false,
+        true
+      ],
+      "notes": null,
+      "id": "spawning.require_nearby_allies",
+      "order": 103,
+      "description_status": "transcribed",
+      "allowed_values_status": "visible_options",
+      "source_timestamps": [
+        {
+          "start_seconds": 243.5,
+          "end_seconds": 244.0
+        }
+      ]
+    },
+    {
+      "category": "Spawning",
+      "name": "Require Nearby Objective",
+      "type": "boolean",
+      "description": "If true, only spawns with objectives nearby will be considered. This is a simple \"is an objective nearby\" check, it is not weighted like enemies are. If there are no objectives found then this option is ignored.",
+      "allowed_values": [
+        false,
+        true
+      ],
+      "notes": null,
+      "id": "spawning.require_nearby_objective",
+      "order": 104,
+      "description_status": "transcribed",
+      "allowed_values_status": "visible_options",
+      "source_timestamps": [
+        {
+          "start_seconds": 244.5,
+          "end_seconds": 245.0
+        }
+      ]
+    },
+    {
+      "category": "Spawning",
+      "name": "Require No Nearby Objective",
+      "type": "boolean",
+      "description": "If true, only spawns with objectives beyond a specific distance will be considered.",
+      "allowed_values": [
+        false,
+        true
+      ],
+      "notes": null,
+      "id": "spawning.require_no_nearby_objective",
+      "order": 105,
+      "description_status": "transcribed",
+      "allowed_values_status": "visible_options",
+      "source_timestamps": [
+        {
+          "start_seconds": 245.5,
+          "end_seconds": 246.0
+        },
+        {
+          "start_seconds": 275.5,
+          "end_seconds": 276.0
+        }
+      ]
+    },
+    {
+      "category": "Spawning",
+      "name": "Ally Consideration Distance",
+      "type": "slider",
+      "description": "The max distance from an ally for a spawn to be considered when bRequireNearbyAllies is on.",
+      "allowed_values": {
+        "min": 0.0,
+        "max": 50000.0
+      },
+      "notes": null,
+      "id": "spawning.ally_consideration_distance",
+      "order": 106,
+      "description_status": "transcribed",
+      "numeric_format": "decimal",
+      "display_decimal_places": 2,
+      "step": null,
+      "allowed_values_status": "observed_slider_endpoints",
+      "source_timestamps": [
+        {
+          "start_seconds": 246.5,
+          "end_seconds": 249.5
+        }
+      ]
+    },
+    {
+      "category": "Spawning",
+      "name": "Objective Max Distance",
+      "type": "slider",
+      "description": "The maximum distance away from objectives that a player should spawn at. Only used if bRequireNearbyObjective is enabled.",
+      "allowed_values": {
+        "min": 0.0,
+        "max": 50000.0
+      },
+      "notes": null,
+      "id": "spawning.objective_max_distance",
+      "order": 107,
+      "description_status": "transcribed",
+      "numeric_format": "decimal",
+      "display_decimal_places": 2,
+      "step": null,
+      "allowed_values_status": "observed_slider_endpoints",
+      "source_timestamps": [
+        {
+          "start_seconds": 250.0,
+          "end_seconds": 251.0
+        },
+        {
+          "start_seconds": 252.0,
+          "end_seconds": 253.0
+        }
+      ]
+    },
+    {
+      "category": "Spawning",
+      "name": "Objective Min Distance",
+      "type": "slider",
+      "description": "The minimum distance away from objectives that a player should spawn at. Only used if bRequireNoNearbyObjective is enabled.",
+      "allowed_values": {
+        "min": 0.0,
+        "max": 50000.0
+      },
+      "notes": null,
+      "id": "spawning.objective_min_distance",
+      "order": 108,
+      "description_status": "transcribed",
+      "numeric_format": "decimal",
+      "display_decimal_places": 2,
+      "step": null,
+      "allowed_values_status": "observed_slider_endpoints",
+      "source_timestamps": [
+        {
+          "start_seconds": 253.5,
+          "end_seconds": 256.0
+        }
+      ]
+    },
+    {
+      "category": "Spawning",
+      "name": "Enemy Portal Spawn Sort Weight",
+      "type": "slider",
+      "description": "How much linked enemy portals influence spawn location selection (higher is less influence).",
+      "allowed_values": {
+        "min": 0.0,
+        "max": 10.0
+      },
+      "notes": null,
+      "id": "spawning.enemy_portal_spawn_sort_weight",
+      "order": 109,
+      "description_status": "transcribed",
+      "numeric_format": "decimal",
+      "display_decimal_places": 2,
+      "step": null,
+      "allowed_values_status": "observed_slider_endpoints",
+      "source_timestamps": [
+        {
+          "start_seconds": 256.5,
+          "end_seconds": 259.0
+        }
+      ]
+    },
+    {
+      "category": "Spawning",
+      "name": "Enemy Unlinked Portal Spawn Sort Weight",
+      "type": "slider",
+      "description": "How much unlinked enemy portals influence spawn location selection (higher is less influence).",
+      "allowed_values": {
+        "min": 0.0,
+        "max": 10.0
+      },
+      "notes": null,
+      "id": "spawning.enemy_unlinked_portal_spawn_sort_weight",
+      "order": 110,
+      "description_status": "transcribed",
+      "numeric_format": "decimal",
+      "display_decimal_places": 2,
+      "step": null,
+      "allowed_values_status": "observed_slider_endpoints",
+      "source_timestamps": [
+        {
+          "start_seconds": 259.5,
+          "end_seconds": 261.5
+        }
+      ]
+    },
+    {
+      "category": "Spawning",
+      "name": "Enemy Portal Wall Spawn Sort Weight",
+      "type": "slider",
+      "description": "How much enemy-viewed Portal Walls influence spawn location selection (higher is less influence).",
+      "allowed_values": {
+        "min": null,
+        "max": null
+      },
+      "notes": "The clip shows 5.00 but does not demonstrate the slider endpoints. Minimum and maximum are unknown.",
+      "observed_value": 5.0,
+      "id": "spawning.enemy_portal_wall_spawn_sort_weight",
+      "order": 111,
+      "description_status": "transcribed",
+      "numeric_format": "decimal",
+      "display_decimal_places": 2,
+      "step": null,
+      "allowed_values_status": "not_demonstrated",
+      "source_timestamps": [
+        {
+          "start_seconds": 262.4,
+          "end_seconds": 262.4
+        }
+      ]
+    },
+    {
+      "category": "Spawning",
+      "name": "Enemy Far Distance",
+      "type": "slider",
+      "description": "Distance at which an enemy actor is considered far away. The spawn will be assumed to not be visible if an enemy is far away and the spawn is behind them.",
+      "allowed_values": {
+        "min": 0.0,
+        "max": 50000.0
+      },
+      "notes": null,
+      "id": "spawning.enemy_far_distance",
+      "order": 112,
+      "description_status": "transcribed",
+      "numeric_format": "decimal",
+      "display_decimal_places": 2,
+      "step": null,
+      "allowed_values_status": "observed_slider_endpoints",
+      "source_timestamps": [
+        {
+          "start_seconds": 262.5,
+          "end_seconds": 264.5
+        }
+      ]
+    },
+    {
+      "category": "Spawning",
+      "name": "Enemy Portal Wall Consideration Distance",
+      "type": "slider",
+      "description": "The distance at which Portal Walls will be searched for when finding ones within line of sight of enemies.",
+      "allowed_values": {
+        "min": 0.0,
+        "max": 50000.0
+      },
+      "notes": null,
+      "id": "spawning.enemy_portal_wall_consideration_distance",
+      "order": 113,
+      "description_status": "transcribed",
+      "numeric_format": "decimal",
+      "display_decimal_places": 2,
+      "step": null,
+      "allowed_values_status": "observed_slider_endpoints",
+      "source_timestamps": [
+        {
+          "start_seconds": 265.0,
+          "end_seconds": 268.0
+        }
+      ]
+    },
+    {
+      "category": "Spawning",
+      "name": "Enemy Portal Consideration Distance",
+      "type": "slider",
+      "description": "The distance at which portals will be searched for when finding ones within line of sight of enemies.",
+      "allowed_values": {
+        "min": 0.0,
+        "max": 50000.0
+      },
+      "notes": null,
+      "id": "spawning.enemy_portal_consideration_distance",
+      "order": 114,
+      "description_status": "transcribed",
+      "numeric_format": "decimal",
+      "display_decimal_places": 2,
+      "step": null,
+      "allowed_values_status": "observed_slider_endpoints",
+      "source_timestamps": [
+        {
+          "start_seconds": 269.0,
+          "end_seconds": 271.0
+        },
+        {
+          "start_seconds": 274.0,
+          "end_seconds": 274.5
+        }
+      ]
+    },
+    {
+      "category": "Spawning",
+      "name": "Prevent Spawning when Team Is Dead",
+      "type": "boolean",
+      "description": "If true, blocks respawning once your team is dead.",
+      "allowed_values": [
+        false,
+        true
+      ],
+      "notes": null,
+      "id": "spawning.prevent_spawning_when_team_is_dead",
+      "order": 115,
+      "description_status": "transcribed",
+      "allowed_values_status": "visible_options",
+      "source_timestamps": [
+        {
+          "start_seconds": 273.4,
+          "end_seconds": 273.4
+        }
+      ]
+    }
+  ]
+}
