@@ -6,6 +6,7 @@ Community documentation for Splitgate, maintained by SGLifers. This repository i
 
 - [Advanced settings reference](docs/settings/advanced-settings.md) — 115 settings across nine categories, including descriptions, control types, demonstrated ranges, enum choices, and source video timestamps.
 - [Advanced settings JSON](data/advanced-settings.json) — the same extraction in a structured format for tools and analysis.
+- [Advanced settings frames](assets/advanced-settings/README.md) — all 553 original extracted screenshots, with a frame index and preview.
 
 ## Source and scope
 

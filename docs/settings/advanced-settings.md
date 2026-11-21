@@ -4,6 +4,8 @@
 
 Source: **all advanced settings.mp4**, Standard Rules tab, build **3.1-643074**.
 
+Supporting images: [browse all 553 extracted video frames](../../assets/advanced-settings/README.md).
+
 Ranges below are the demonstrated slider endpoints, inclusive. Decimal sliders display two decimal places; the clip does not establish their exact step size or internal precision. Timestamps are approximate. Current values are not treated as defaults.
 
 **Unresolved range:** Enemy Portal Wall Spawn Sort Weight shows 5.00, but its slider limits are not demonstrated.
